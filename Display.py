@@ -1,17 +1,19 @@
-import tkinter as tk
+import tkinter as tk #librarie utilisée pour le projet
 from tkinter import *
-import Algorithm as alg
+import Algorithm as alg #importation du fichier Algorithm pour générer le labyrinthe
 
-w = tk.Tk()
-c = Canvas(w,width=450, height=450)
+w = tk.Tk() #création de la fenêtre
+c = Canvas(w,width=450, height=450) #creation du canvas pour dessiner
 
 class display:
-    w.minsize(500,500)
+    w.minsize(500,500) #taille fenêtre
     
     def generate ():
-        c.delete("all")
+        c.delete("all") #effacer le contenu du canvas
         pas = 20
-        laby = alg.genlaby()
+        laby = alg.genlaby() #reception du laby
+
+        #affichage
         for i in range(1,18):
             for j in range(1,18):
                 if laby[i][j] is not None:
@@ -25,6 +27,7 @@ class display:
 
     
     w.title('Laby')
+    #creation du bouton
     button = tk.Button(w, text='Generate', width=15,command=generate, activebackground='blue', activeforeground='white', bg='lightgray')
     button.pack()
     
