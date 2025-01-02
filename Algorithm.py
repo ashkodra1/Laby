@@ -38,7 +38,7 @@ def genlaby():
 
     #bordure du laby (0 à 19)
     for posx in range(19):
-        laby[posx,19].visite=True
+        laby[posx][19].visite=True
         laby[posx,0].visite=True
 
     for posy in range(19):
@@ -100,4 +100,6 @@ def genlaby():
             trajet[compteur].y=posy
             compteur=compteur+1
             posx=posx+1
+
+    return laby
 
