@@ -4,15 +4,17 @@ from tkinter import *
 w = tk.Tk()
 
 class display:
-    w.minsize(1000,700)
+    w.minsize(500,500)
     
     def generate ():
-        c = Canvas(w,width=450, height=450)
-        c.create_line(0,200,450,200)
+        c = Canvas(w,bg='lightgray',width=450, height=450)
+        
+        c.pack()
+        
 
     
     w.title('Laby')
-    button = tk.Button(w, text='Generate', width=15,command=generate)
+    button = tk.Button(w, text='Generate', width=15,command=generate, activebackground='blue', activeforeground='white', bg='lightgray')
     button.pack()
     
     w.mainloop()
