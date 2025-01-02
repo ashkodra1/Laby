@@ -3,13 +3,13 @@ from tkinter import *
 import Algorithm as alg
 
 w = tk.Tk()
+c = Canvas(w,bg='lightgray',width=450, height=450)
 
 class display:
     w.minsize(500,500)
     
     def generate ():
-
-        c = Canvas(w,bg='lightgray',width=450, height=450)
+        c.delete("all")
         pas = 20
         laby = alg.genlaby()
         for i in range(1,19):
