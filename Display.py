@@ -14,11 +14,11 @@ class display:
         laby = alg.genlaby()
         for i in range(1,19):
             for j in range(1,19):
-                if laby(i,j) is not None:
-                    if not laby(i,j).haut: c.create_line((i-1)*pas, (j-1)*pas, (i-1)*pas+pas, (j-1)*pas, fill='black')
-                    if not laby(i,j).bas: c.create_line((i-1)*pas, (j-1)*pas+pas, (i-1)*pas+pas, (j-1)*pas+pas, fill='black')
-                    if not laby(i,j).gauche: c.create_line((i-1)*pas, (j-1)*pas, (i-1)*pas, (j-1)*pas+pas, fill='black')
-                    if not laby(i,j).droite: c.create_line((i-1)*pas+pas, (j-1)*pas, (i-1)*pas+pas, (j-1)*pas+pas, fill='black')
+                if laby[i][j] is not None:
+                    if not laby[i][j].haut: c.create_line((i-1)*pas, (j-1)*pas, (i-1)*pas+pas, (j-1)*pas, fill='black')
+                    if not laby[i][j].bas: c.create_line((i-1)*pas, (j-1)*pas+pas, (i-1)*pas+pas, (j-1)*pas+pas, fill='black')
+                    if not laby[i][j].gauche: c.create_line((i-1)*pas, (j-1)*pas, (i-1)*pas, (j-1)*pas+pas, fill='black')
+                    if not laby[i][j].droite: c.create_line((i-1)*pas+pas, (j-1)*pas, (i-1)*pas+pas, (j-1)*pas+pas, fill='black')
         c.pack()
         
         
