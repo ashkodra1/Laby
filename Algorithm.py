@@ -25,17 +25,6 @@ def genlaby():
     laby = [[Carree(False, False, False, False, False) for i in range(19)] for j in range(19)]
 
 
-
-    #chaque case de laby as ses propre caractéristiques (bas,haut,gauche,droite,visite)
-    # for posx in range(19):
-    #   for posy in range(19):
-    #     laby[posx,posy]=new Carree
-
-    # #chaque case de trajet a sa propre position
-    # for compteur in range(324):
-    #   trajet[compteur]=new Position
-
-
     #bordure du laby (0 à 19)
     for posx in range(19):
         laby[posx][18].visite=True
