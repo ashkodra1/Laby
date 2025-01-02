@@ -55,7 +55,7 @@ def genlaby():
     while compteur>0 and compteur<325:
         hasard=random.randint(1, 4) # on génère un nombre entre 1 et 4 pour déterminer la direction
         #si on est bloqué, retourne à la dernière case avec d'autres possibilités
-        if laby[posx][posy+1].visite==True and laby[posx][posy-1].visite==True and laby[-1][posy].visite==True and laby[posx+1][posy].visite==True:
+        if laby[posx][posy+1].visite==True and laby[posx][posy-1].visite==True and laby[posx-1][posy].visite==True and laby[posx+1][posy].visite==True:
             laby[posx][posy].visite=True
             posx=trajet[compteur-1].x
             posy=trajet[compteur-1].y
