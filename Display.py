@@ -3,7 +3,7 @@ from tkinter import *
 import Algorithm as alg
 
 w = tk.Tk()
-c = Canvas(w,bg='lightgray',width=450, height=450)
+c = Canvas(w,width=450, height=450)
 
 class display:
     w.minsize(500,500)
@@ -12,8 +12,8 @@ class display:
         c.delete("all")
         pas = 20
         laby = alg.genlaby()
-        for i in range(1,19):
-            for j in range(1,19):
+        for i in range(1,18):
+            for j in range(1,18):
                 if laby[i][j] is not None:
                     if not laby[i][j].haut: c.create_line((i)*pas, (j)*pas, (i)*pas+pas, (j)*pas, fill='black')
                     if not laby[i][j].bas: c.create_line((i)*pas, (j)*pas+pas, (i)*pas+pas, (j)*pas+pas, fill='black')
