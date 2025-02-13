@@ -7,5 +7,4 @@ Ce projet est un générateur de labyrinthe en Python. Nous avons d'abord réali
 
 ----
 
-![image](https://github.com/user-attachments/assets/e26d894d-cab8-427f-94b2-3fca5990ffc1)
-
+![Laby_demo](https://github.com/user-attachments/assets/44de7983-08fa-4b31-a635-930ff2b4b473)
